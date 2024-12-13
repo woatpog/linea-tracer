@@ -10,19 +10,19 @@ def process_range(int1, int2):
         end = min((start // BATCH_SIZE + 1) * BATCH_SIZE - 1, int2)
         ranges.append(f"{start}-{end}")
         start = end + 1
-    ranges.append('###############')  # Отметка
+    ranges.append('###############')
     return ranges
 
 def read_csv(input_file):
     data = []
-    with open(input_file, mode='r', newline='', encoding='utf-8') as file:  # Добавлен encoding
+    with open(input_file, mode='r', newline='', encoding='utf-8') as file:
         reader = csv.reader(file)
         for row in reader:
             data.append(row)
     return data
 
 def write_csv(output_file, data):
-    with open(output_file, mode='w', newline='', encoding='utf-8') as file:  # Добавлен encoding
+    with open(output_file, mode='w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
         for row in data:
             writer.writerow(row)
