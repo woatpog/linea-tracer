@@ -11,7 +11,7 @@ startBlock=$1
 endBlock=$2
 
 # Define the endpoint URL
-url='localhost:15480'
+url='http://localhost:15480'  # Added protocol
 
 # Engine version
 version='0.5.1-beta'
